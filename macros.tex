@@ -1,0 +1,23 @@
+% textttは打ちにくいのでTtで使えるようにする
+\newcommand{\Tt}[1]{\texttt{#1}}
+
+% 中央揃えのセルをCcellで使えるようにする
+\newcommand{\Ccell}[1]{\multicolumn{1}{c}{#1}}
+
+% 各種参照を簡単にする
+\newcommand{\Image}[1]{図\ref{img:#1}}
+\newcommand{\Tab}[1]{表\ref{tab:#1}}
+\newcommand{\Eq}[1]{式\eqref{eq:#1}}
+\newcommand{\List}[1]{リスト\ref{list:#1}}
+
+% 表を簡単に作れるようにする
+\newenvironment{Table}[3]{
+	\begin{table}[htbp]
+		\centering
+		\caption{#1}
+		\label{#2}
+		\begin{tabular}{#3}
+}{
+		\end{tabular}
+	\end{table}
+}

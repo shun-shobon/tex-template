@@ -1,0 +1,41 @@
+% ヒラギノフォントを使用する
+\usepackage[hiragino-pron]{luatexja-preset}
+
+% 画像を取り扱う
+\usepackage[luatex]{graphicx}
+
+% 罫線の種類を増やす
+\usepackage{booktabs}
+
+% 数式関連のパッケージ
+\usepackage{amsmath}
+\usepackage{mathtools}
+% 参照した数式のみ番号を振る
+\mathtoolsset{showonlyrefs=true}
+
+% ソースコードを取り扱う
+\usepackage{listings}
+% キャプション名を変更する
+\renewcommand{\lstlistingname}{リスト}
+% listingsパッケージの設定
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0em,
+  xleftmargin=2em,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1em,
+  lineskip=-0.5ex
+}
+
+% アンダースコアのエスケープを不要にする
+\usepackage[strings]{underscore}
